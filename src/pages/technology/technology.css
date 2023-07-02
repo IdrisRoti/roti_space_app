@@ -1,0 +1,124 @@
+.technology {
+    background: url('../../assets/technology/background-technology-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.technology .left {
+    display: flex;
+    gap: 3rem;
+}
+
+.technology .left .tech-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.technology .left .link {
+    width: 5rem;
+    height: 5rem;
+    border: 1px solid rgba(255,255,255,.4);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.technology .left .link:hover {
+    border-color: #fff;
+}
+
+.technology .left .link.isActive {
+    background: #fff;
+    color: rgba(0,0,0,.9);
+}
+
+.technology .details h3 {
+    font-weight: 300;
+    letter-spacing: 2px;
+    color: var(--text-color);
+}
+
+.technology .details h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    font-family: 'Bacasime Antique', serif;
+    margin: 1rem 0 2rem 0;
+    text-transform: uppercase;
+}
+
+.technology .details p {
+    line-height: 2;
+    color: var(--text-color);
+}
+
+.technology .right {
+    margin-left: auto;
+}
+
+.technology .right img {
+    width: 30rem;
+}
+
+/* MEDIA QUERY FOR TABLETS */
+@media screen and (max-width: 1024px) {
+    .technology .container {
+        padding-top: 13rem;
+    }
+
+    .technology .right img {
+        width: 23rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .technology .container {
+        padding-top: 7rem;
+        text-align: center;
+    }
+
+    .technology .left {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .technology .left .tech-links {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+
+    .technology .left .link {
+        width: 3rem;
+        height: 3rem;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+
+    .technology .details h1 {
+        font-size: 2.5rem;
+    }
+
+    .technology .details p {
+        width: 90vw;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+    }
+
+    .technology .right {
+        order: -1;
+        margin: 0 auto;
+    }
+
+    .technology .right img {
+        width: 100vw;
+        height: 30vh;
+        object-fit: cover;
+    }
+}

@@ -1,0 +1,169 @@
+nav {
+    display: grid;
+    grid-template-columns: 10% 40% 50%;
+    align-items: center;
+    position: fixed;
+    top: 2rem;
+    width: 100vw;
+    z-index: 999;
+}
+
+nav .menuBtn {
+    display: none;
+}
+
+nav .closeMenu {
+    display: none;
+}
+
+nav .logo {
+    margin-left: 4rem;
+}
+
+nav .line {
+    width: 42vw;
+    height: 1px;
+    background: rgba(255,255,255,.3);
+    z-index: 2;
+}
+
+nav ul {
+    display: flex;
+    gap: 3rem;
+    background: rgba(255,255,255,.08);
+    width: 100%;
+    margin-left: auto;
+    padding: 2.4rem;
+    justify-content: center;
+    backdrop-filter: blur(3px);
+}
+
+nav ul li {
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 2px;
+    position: relative;
+}
+
+nav ul li .active::after {
+    position: absolute;
+    content: "";
+    background: #fff;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    top: 3.5rem;
+}
+
+nav ul li :hover::before {
+    position: absolute;
+    content: "";
+    background: rgba(255,255,255,.5);
+    width: 100%;
+    height: 3px;
+    left: 0;
+    top: 3.5rem;
+}
+
+nav ul li b {
+    font-weight: 700;
+    margin-right: .2rem;
+}
+
+/* MEDIA QUERY FOR TABLETS */
+@media screen and (max-width: 1024px) {
+    nav {
+        grid-template-columns: 30% auto;
+    }
+
+    nav .logo {
+        margin-left: 2rem;
+    }
+
+    nav .line {
+        display: none;
+    }
+
+    nav ul {
+        gap: 1rem;
+        padding: 2rem;
+        justify-content: flex-end;
+    }
+
+    nav .line {
+        width: 33vw;
+    }
+
+    nav ul li .active::after, 
+    nav ul li :hover::before {
+        width: 0;
+        height: 0;
+        margin-left: 1rem;
+    }
+
+    nav ul li {
+        font-size: .8rem;
+    }
+}
+
+
+/* MEDIA QUERY FOR MOBILE PHONES */
+@media screen and (max-width: 600px) {
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        top: 0;
+        padding: 1.5rem;
+    }
+
+    .showNav {
+        right: 0;
+    }
+
+    .hideNav {
+        right: -100%;
+    }
+
+    nav .menuBtn {
+        display: block;
+    }
+
+    nav .closeMenu {
+        display: block;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+
+    nav .logo {
+        margin-left: 0;
+    }
+
+    nav .logo img {
+        width: 2.2rem;
+    }
+
+    nav .line {
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 80vw;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        justify-content: flex-start;
+        padding-top: 8rem;
+        gap: 3rem;
+        background: rgba(146, 141, 141, 0.3);
+        box-shadow: 8px 0 1rem 5px rgba(0,0,0,.5);
+    }
+
+    nav ul li .active {
+        margin-left: .7rem;
+    }
+
+}

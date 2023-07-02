@@ -1,0 +1,152 @@
+.home {
+    background: url('../../assets/home/background-home-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+.home .container {
+    padding-top: 0;
+}
+
+.home .left {
+    margin-bottom: -5rem;
+}
+
+.home h2 {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: -.5rem;
+}
+
+.home h1 {
+    font-family: 'Bacasime Antique', serif;
+    font-size: 9rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.home p {
+    line-height: 2.3;
+    color: var(--text-color);
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.home .explore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    font-family: 'Bacasime Antique', serif;
+    font-size: 2.3rem;
+    color: rgb(10, 10, 36);
+    width: 16rem;
+    height: 16rem;
+    background: #fff;
+    border-radius: 100%;
+    cursor: pointer;
+    margin-bottom: -10rem;
+}
+
+.home .explore:hover {
+    animation: explore;
+    animation-duration: .7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* EXPLORE BUTTON ON HOMPAGE ANIMATION */
+@keyframes explore {
+    from {
+        box-shadow: 0 0 0 0 rgba(255,255,255,0);
+    } 
+    
+    to {
+        box-shadow: 0 0 4px 70px rgba(255,255,255,.2);
+    }
+}
+
+
+
+/* MEDIA QUERY FOR TABLETS */
+@media screen and (max-width: 1024px) {
+    .home {
+        padding-top: 8rem;
+        text-align: center;
+    }
+
+    .home .container {
+        grid-template-columns: 1fr;
+    }
+
+    .home .left {
+        margin-bottom: 0;
+    }
+    
+    .home h2 {
+        margin-bottom: 0;
+    }
+
+    .home h1 {
+        font-size: 8rem;
+    }
+    
+    .home p {
+        width: 70%;
+        margin: 10px auto 2rem auto;
+    }
+    
+    .home .explore {
+        margin: 0 auto;
+        font-size: 1.8rem;
+        width: 14rem;
+        height: 14rem;
+        margin-bottom: 0;
+
+        animation: explore;
+        animation-duration: .7s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+}
+
+
+/* MEDIA QUERY FOR MOBILE PHONES */
+@media screen and (max-width: 600px) {
+    .home {
+        background: url('../../assets/home/background-home-mobile.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 1rem;
+        padding-top: 5rem;
+        height: 100vh;
+    }
+    
+    .home h2 {
+        font-size: 1rem;
+    }
+    
+    .home h1 {
+        font-family: 'Bacasime Antique', serif;
+        font-size: 4rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+    }
+    
+    .home p {
+        font-size: 16px;
+        width: 100%;
+    }
+    
+    .home .explore {
+        font-size: 1.5rem;
+        width: 10rem;
+        height: 10rem;
+    }
+}
