@@ -157,9 +157,12 @@ nav ul li b {
         height: 100vh;
         justify-content: flex-start;
         padding-top: 8rem;
-        gap: 3rem;
         background: rgba(146, 141, 141, 0.3);
         box-shadow: 8px 0 1rem 5px rgba(0,0,0,.5);
+    }
+
+    nav ul li {
+        margin-bottom: 3rem;
     }
 
     nav ul li .active {

@@ -24,12 +24,15 @@
 
 .right .destination-links {
     display: flex;
-    gap: 2.5rem;
     color: var(--text-color);
 }
 
 .right .destination-links .link {
     position: relative;
+}
+
+.right .destination-links .link:not(:last-of-type) {
+    margin-right: 2.5rem;
 }
 
 .right .destination-links .isActive::after {
@@ -131,7 +134,6 @@
     }
 
     .right .destination-links {
-        gap: 2.5rem;
         justify-content: center;
     }
 
@@ -156,7 +158,11 @@
 /* MEDIA QUERY FOR MOBILE PHONES */
 @media screen and (max-width: 600px) {
     .destination .container {
-        padding-top: 7rem;
+        padding-top: 5rem;
+    }
+
+    .destination .heading {
+        margin-bottom: 0;
     }
 
     .left h2 {
@@ -165,25 +171,28 @@
 
     .left img {
         width: 10rem;
-        margin: 2rem 0 ;
+        margin: 2rem 0;
     }
 
     .right .destination-links {
-        gap: 2rem;
         justify-content: center;
         grid-template-columns: 1fr;
+    }
+
+    .right .destination-links .link:not(:last-of-type) {
+        margin-right: 2rem;
     }
 
     .right h1 {
         font-size: 4rem;
         font-family: 'Bacasime Antique', serif;
         font-weight: 300;
-        margin: 3rem 0 1rem 0;
+        margin: 2rem 0 1rem 0;
         letter-spacing: 4px;
     }
 
     .right > p {
-        width: 90%;
+        width: 95%;
         margin: 0 auto;
         line-height: 1.8;
     }

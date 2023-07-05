@@ -38,7 +38,10 @@
 
 .crew .left .dots {
   display: flex;
-  gap: 1rem;
+}
+
+.crew .left .dots > div:not(:last-of-type) {
+  margin-right: 1rem;
 }
 
 .crew .left .dots > div {
